@@ -1,0 +1,18 @@
+workflows:
+  bob-routine-ios:
+    name: BOB Routine iOS
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Install XcodeGen
+        script: |
+          brew install xcodegen
+      - name: Generate Xcode project
+        script: |
+          xcodegen generate
+      - name: Build simulator
+        script: |
+          xcodebuild -project BOBRoutine.xcodeproj -scheme BOBRoutine -sdk iphonesimulator -configuration Debug CODE_SIGNING_ALLOWED=NO build
+    artifacts:
+      - ~/Library/Developer/Xcode/DerivedData/**/Build/**/*.app

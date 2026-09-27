@@ -1,0 +1,20 @@
+name: BOBRoutine
+options:
+  bundleIdPrefix: com.bobroutine
+targets:
+  BOBRoutine:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources: [BOBRoutine]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.bobroutine.app
+        PRODUCT_NAME: BOB Routine
+        SWIFT_VERSION: 5.0
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: BOB Routine
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1"
